@@ -1,0 +1,404 @@
+body{
+    margin: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+nav{
+	display: flex;
+	background-color:#cc0000;
+	opacity: 0.9;
+	height: 40px;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 14px;
+} 
+	
+#second{
+	display: flex;
+	font-size: 90%;
+	font-family: "Roboto Condensed", sans-serif;
+	gap: 18px;
+	margin: 0 15%;
+}
+
+#second a{
+	color: white;	
+}
+
+#second a:link{
+	text-decoration: none; 
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 700px;
+    margin: 32px auto 18px auto;
+    gap: 10px;
+}
+
+#icone-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.icona-nav {
+    font-size: 2em;
+    color: #cc0000;
+    background: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(204,0,0,0.07);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icona-nav:hover {
+    background: #cc0000;
+    color: #fff;
+    transform: scale(1.12);
+    box-shadow: 0 4px 16px rgba(204,0,0,0.15);
+}
+
+.logout-btn {
+    background: #cc0000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(204,0,0,0.07);
+    margin-left: 10px;
+}
+
+.logout-btn:hover {
+    background: #a80000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header h1{
+    font-size: 1.5em;
+    color: #cc0000;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+section {
+    padding: 2% 10%;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+section h1{
+    font-size: 2em;
+    color: darkred;
+    margin-bottom: 1.5em;
+    border-bottom: 2px solid darkred;
+    padding-bottom: 0.5em;
+}
+
+.contenitore-bottone {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2em;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(204,0,0,0.07);
+    padding: 24px 32px;
+    margin: 0 auto 2em auto;
+    max-width: 700px;
+    min-height: 80px;
+}
+
+.contenitore-bottone #mostra {
+    font-size: 1.3em;
+    padding: 18px 36px;
+    background-color: #cc0000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin: 18px auto 28px auto;
+    display: block;
+}
+
+.contenitore-bottone #mostra:hover {
+    background-color: #a80000;
+    transform: scale(1.04);
+}
+
+#riepilogo-carrello {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(204,0,0,0.07);
+    padding: 18px 28px;
+    margin-left: 1em;
+    gap: 0.8em;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.1em;
+    border: 2px solid #cc0000; 
+    color: #cc0000;
+    min-width: 220px;
+}
+
+#riepilogo-carrello span {
+    color: #333;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+#riepilogo-carrello button {
+    margin-top: 10px;
+    background: #cc0000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1em;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#riepilogo-carrello button:hover {
+    background: #a80000;
+    transform: scale(1.04);
+}
+
+#lista-carrello {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.messaggio-vuoto {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3em;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.messaggio-vuoto p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.messaggio-vuoto a {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.messaggio-vuoto a:hover {
+    background-color: #a30000;
+}
+
+.elemento-carrello {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 340px; /* o quanto serve per il tuo layout */
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background: #fff;
+}
+
+.elemento-carrello:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.elemento-carrello img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info-carrello {
+    flex: 1 1 auto;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.titolo {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.autore, .prezzo, .quantita {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 0.5em;
+}
+
+.rimuovi {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: 1em;
+    background: #cc0000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 1em;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    nav #second{
+        display: none;
+    }
+
+    section {
+        padding: 2% 3%;
+    }
+
+    .contenitore-bottone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto 1.5em auto;
+        padding: 0;
+    }
+
+    #mostra {
+        width: 90%;
+        max-width: 400px;
+        font-size: 1.1em;
+        margin: 0.7em auto 0.7em auto; /* centra sempre */
+        display: block;
+    }
+
+    #riepilogo-carrello {
+    width: 95%;
+    max-width: 400px;
+    margin: 0.7em auto 0 auto;
+    font-size: 1em;
+    gap: 0.7em;
+    align-items: center;         /* centra il contenuto */
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(204,0,0,0.07);
+    padding: 1.2em 0.8em 1.2em 0.8em;
+    border: 2px solid #cc0000;
+    color: #cc0000;
+    }
+
+    #riepilogo-carrello span {
+        color: #333;
+        font-weight: 500;
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.3em;
+    }
+
+    #riepilogo-carrello button {
+        width: 100%;
+        margin-top: 0.7em;
+        font-size: 1.1em;
+    }
+
+    #lista-carrello {
+        grid-template-columns: 1fr;
+        gap: 0.7em;
+        margin-top: 0.7em;
+    }
+
+    .elemento-carrello {
+        margin: 0.5em 0;
+        border-radius: 6px;
+        min-height: 120px;
+        padding: 0.3em 0.1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 0 1px 4px rgba(204,0,0,0.07);
+        border: 1px solid #eee;
+    }
+
+    .elemento-carrello img {
+        width: 70px;
+        max-height: 90px;
+        object-fit: contain;
+        margin: 0 0.5em 0 0;
+        border-radius: 4px;
+        flex-shrink: 0;
+    }
+
+    .info-carrello {
+        padding: 0.5em 0.3em;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .titolo {
+        font-size: 0.95em;
+        margin-bottom: 0.2em;
+    }
+
+    .autore, .prezzo, .quantita {
+        font-size: 0.8em;
+        margin-bottom: 0.2em;
+    }
+
+    .rimuovi {
+        font-size: 0.75em;
+        padding: 0.4em 0.2em;
+        border-radius: 4px;
+        width: 90%;
+        margin: 0.5em auto 0.5em auto;
+        align-self: center;
+    }
+}
